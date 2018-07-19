@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:listview/basic_list.dart';
+import 'package:listview/horizontal_listview.dart';
 import 'package:listview/listtile_demo.dart';
 import 'package:listview/listtile_divide_tiles_demo.dart';
 import 'package:listview/listview_builder_demo.dart';
@@ -23,10 +24,11 @@ class MyApp extends StatelessWidget {
         '/listtile_demo': (context) => ListTileDemo(),
         '/listview_builder_demo': (context) => ListViewBuilderDemo(),
         '/listview_divider_demo': (context) => ListViewDividerDemo(),
-        '/listview_divider_indent_demo': (context) => ListViewDividerIndentDemo(),
+        '/listview_divider_indent_demo': (context) =>
+            ListViewDividerIndentDemo(),
         '/listtile_divide_tiles_demo': (context) => ListTileDivideTilesDemo(),
+        '/horizontal_listview': (context) => HorizontalListView(),
       },
-
     );
   }
 }
@@ -39,6 +41,7 @@ class HomePage extends StatelessWidget {
     NavItem('ListView divider', '/listview_divider_demo'),
     NavItem('ListView divider indent', '/listview_divider_indent_demo'),
     NavItem('ListTile.divideTiles()', '/listtile_divide_tiles_demo'),
+    NavItem('Horizontal ListView', '/horizontal_listview'),
   ];
 
   @override

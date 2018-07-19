@@ -11,3 +11,5 @@ ListView examples.
 * Using Divider
 
 * ListTile.divideTiles()
+
+* Horizontal ListView
