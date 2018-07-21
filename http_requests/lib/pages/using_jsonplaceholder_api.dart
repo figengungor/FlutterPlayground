@@ -1,8 +1,10 @@
-import 'dart:async';
-import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:http_requests/network/jsonplaceholder_api.dart';
-import 'package:http_requests/model/post.dart';
+import 'package:http_requests/pages/albums_page.dart';
+import 'package:http_requests/pages/comments_page.dart';
+import 'package:http_requests/pages/photos_page.dart';
+import 'package:http_requests/pages/posts_page.dart';
+import 'package:http_requests/pages/todos_page.dart';
+import 'package:http_requests/pages/users_page.dart';
 
 class UsingJsonPlaceholderApi extends StatefulWidget {
   @override
@@ -12,87 +14,39 @@ class UsingJsonPlaceholderApi extends StatefulWidget {
 }
 
 class UsingJsonPlaceholderApiState extends State<UsingJsonPlaceholderApi> {
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('Using JsonPlaceholder Api')),
-      body: _getBody(),
+    return DefaultTabController(
+      length: 6,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text('Using JsonPlaceholder Api'),
+          bottom: TabBar(
+            isScrollable: true,
+            tabs: [
+              Tab(text: 'Posts'),
+              Tab(text: 'Comments'),
+              Tab(text: 'Users'),
+              Tab(text: 'Todos'),
+              Tab(text: 'Photos'),
+              Tab(text: 'Album'),
+            ],
+          ),
+        ),
+        body: _getBody(),
+      ),
     );
   }
 
   _getBody() {
-    return Center(
-      child: FutureBuilder<List<Post>>(
-        future: JsonPlaceholderApi().getPosts(),
-        builder: (context, snapshot) {
-          if (snapshot.hasData) {
-            return getListView(snapshot.data);
-          } else if (snapshot.hasError) {
-            return getErrorMessage(snapshot.error);
-          }
-          // By default, show a loading spinner
-          return CircularProgressIndicator();
-        },
-      ),
-    );
-  }
-
-
-  _getPostRow(Post post) {
-    return ListTile(
-      title: Text(post.title),
-      subtitle: Text(
-        post.body,
-        maxLines: 2,
-        overflow: TextOverflow.ellipsis,
-      ),
-    );
-  }
-
-  getListView(List<Post> data) {
-    if (data.isNotEmpty) {
-      return ListView.builder(
-          itemCount: data.length,
-          itemBuilder: (context, index) {
-            if (index.isOdd) return Divider();
-
-            //If both operands are ints then a ~/ b
-            //performs the truncating integer division.
-            int postIndex = index ~/ 2;
-
-            return _getPostRow(data[postIndex]);
-          });
-    } else {
-      return Center(child: Text('No data found.'));
-    }
-  }
-
-  getErrorMessage(Object error) {
-    var errorMessage;
-    if (error is TimeoutException) {
-      errorMessage = 'Time out';
-    } else if (error is IOException) {
-      errorMessage = 'No Internet Connection';
-    } else {
-      errorMessage = error.toString();
-    }
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Text(
-          "$errorMessage",
-          textAlign: TextAlign.center,
-        ),
-        SizedBox(
-          height: 16.0,
-        ),
-        RaisedButton(
-          onPressed: () {
-            setState(() {});
-          },
-          child: Text('Retry'),
-        ),
+    return TabBarView(
+      children: [
+        PostsPage(),
+        CommentsPage(),
+        UsersPage(),
+        TodosPage(),
+        PhotosPage(),
+        AlbumsPage(),
       ],
     );
   }
