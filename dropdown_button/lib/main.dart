@@ -1,4 +1,5 @@
 import 'package:dropdown_button/constant.dart';
+import 'package:dropdown_button/brians_dropdown_button.dart' as brian;
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -39,6 +40,7 @@ class _HomePageState extends State<HomePage> {
       padding: EdgeInsets.all(16.0),
       children: <Widget>[
         _getDropdownButtonBuggy(),
+        _getBriansDropdownButton(),
         _getDropdownButton(),
         _getFullWidthDropdownButton(),
         _getFullWidthAlignedDropdownButton(),
@@ -59,11 +61,25 @@ class _HomePageState extends State<HomePage> {
         .toList();
   }
 
+  _getCityBriansDropdownMenuItems() {
+    return citiesOfTurkey
+        .map((city) => brian.DropdownMenuItem(value: city, child: Text(city)))
+        .toList();
+  }
+
   _getDropdownButtonBuggy() {
     return DropdownButton(
         value: _selectedCity,
         hint: Text('Select your city'),
         items: _getCityDropdownMenuItems(),
+        onChanged: _onChanged);
+  }
+
+  _getBriansDropdownButton() {
+    return brian.DropdownButton(
+        value: _selectedCity,
+        hint: Text('Select your city'),
+        items: _getCityBriansDropdownMenuItems(),
         onChanged: _onChanged);
   }
 
