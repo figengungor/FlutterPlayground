@@ -1,4 +1,8 @@
+import 'package:animation/custom_animated_widget_demo.dart';
+import 'package:animation/animated_widget_examples.dart';
+import 'package:animation/animation_state_demo.dart';
 import 'package:animation/basic_animation_demo.dart';
+import 'package:animation/route_animation_demo.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -14,6 +18,10 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => HomePage(),
         '/basic_animation_demo': (context) => BasicAnimationDemo(),
+        '/custom_animated_widget_demo': (context) => CustomAnimatedWidgetDemo(),
+        '/animated_widget_examples': (context) => AnimatedWidgetExamples(),
+        '/animation_state_demo': (context) => AnimationStateDemo(),
+        '/route_animation_demo': (context) => RouteAnimationDemo(),
       },
     );
   }
@@ -22,6 +30,10 @@ class MyApp extends StatelessWidget {
 class HomePage extends StatelessWidget {
   final _navItems = [
     NavItem('Basic Animation Demo', '/basic_animation_demo'),
+    NavItem('Custom AnimatedWidget Demo', '/custom_animated_widget_demo'),
+    NavItem('AnimatedWidget Examples', '/animated_widget_examples'),
+    NavItem('Animation State Demo', '/animation_state_demo'),
+    NavItem('Route Animation Demo', '/route_animation_demo'),
   ];
 
   @override
