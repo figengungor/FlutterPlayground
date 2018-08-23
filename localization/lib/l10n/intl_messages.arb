@@ -1,0 +1,9 @@
+{
+  "@@last_modified": "2018-08-23T12:47:12.491917",
+  "counterInfoText": "You have pushed the button this many times:",
+  "@counterInfoText": {
+    "description": "The informative text on main screen",
+    "type": "text",
+    "placeholders": {}
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "@@last_modified": "2018-08-20T17:28:40.900203",
+  "counterInfoText": "Butona şu kadar sayıda bastınız:",
+  "@counterInfoText": {
+    "description": "The informative text on main screen",
+    "type": "text",
+    "placeholders": {}
+  }
+}
