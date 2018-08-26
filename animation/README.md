@@ -26,6 +26,8 @@ Animation examples.
     * SlideTransition
     * Custom PageRouteBuilder
 
+* Hero Animation Demo
+
 ### Credits
 
 https://flutter.io/tutorials/animation/

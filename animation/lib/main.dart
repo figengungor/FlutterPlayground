@@ -2,6 +2,7 @@ import 'package:animation/custom_animated_widget_demo.dart';
 import 'package:animation/animated_widget_examples.dart';
 import 'package:animation/animation_state_demo.dart';
 import 'package:animation/basic_animation_demo.dart';
+import 'package:animation/hero_animation_demo.dart';
 import 'package:animation/route_animation_demo.dart';
 import 'package:flutter/material.dart';
 
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
         '/animated_widget_examples': (context) => AnimatedWidgetExamples(),
         '/animation_state_demo': (context) => AnimationStateDemo(),
         '/route_animation_demo': (context) => RouteAnimationDemo(),
+        '/hero_animation_demo': (context) => HeroAnimationDemo(),
       },
     );
   }
@@ -34,6 +36,7 @@ class HomePage extends StatelessWidget {
     NavItem('AnimatedWidget Examples', '/animated_widget_examples'),
     NavItem('Animation State Demo', '/animation_state_demo'),
     NavItem('Route Animation Demo', '/route_animation_demo'),
+    NavItem('Hero Animation Demo', '/hero_animation_demo'),
   ];
 
   @override
