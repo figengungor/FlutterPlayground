@@ -104,14 +104,7 @@ class _PageViewIndicatorDemoState extends State<PageViewIndicatorDemo>
         currentPageIndex: _currentPageIndex,
         itemCount: itemCount,
         dotColor: Colors.white.withOpacity(0.6),
-        selectedDotColor: Colors.white,
-        onPageSelected: (int page) {
-          _pageController.animateToPage(
-            page,
-            duration: _kDuration,
-            curve: _kCurve,
-          );
-        });
+        selectedDotColor: Colors.white);
   }
 
   Widget _buildPageViewWithIndicator(List data) {

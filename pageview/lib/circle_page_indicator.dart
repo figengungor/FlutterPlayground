@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CirclePageIndicator extends StatelessWidget {
-  /// The current page
+  /// The current page index
   final int currentPageIndex;
 
   /// The number of items managed by the PageController
@@ -21,14 +21,15 @@ class CirclePageIndicator extends StatelessWidget {
 
   final double radius;
 
-  static const double _kDotSpacing = 8.0;
+  final double dotSpacing;
 
   CirclePageIndicator({
     Key key,
     @required this.currentPageIndex,
     @required this.itemCount,
-    @required this.onPageSelected,
+    this.onPageSelected,
     this.radius = 8.0,
+    this.dotSpacing = 8.0,
     this.dotColor = Colors.black,
     this.selectedDotColor = Colors.blue,
     this.isSelectedBigger = false,
@@ -46,9 +47,9 @@ class CirclePageIndicator extends StatelessWidget {
           color = selectedDotColor;
         }
         return GestureDetector(
-          onTap: () => onPageSelected(index),
+          onTap: () => onPageSelected == null ? null : onPageSelected(index),
           child: Container(
-            width: size + _kDotSpacing,
+            width: size + dotSpacing,
             child: Material(
               color: color,
               type: MaterialType.circle,
