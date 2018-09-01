@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:pageview/circle_page_indicator.dart';
+import 'package:pageview/circle_page_indicator2.dart';
 
 class PageViewLoop extends StatefulWidget {
   @override
@@ -21,7 +22,7 @@ class _PageViewLoopState extends State<PageViewLoop>
 
   final int maxPageCount = 4;
 
-  int _currentPageIndex = 0;
+  ValueNotifier<int> _currentPageNotifier = ValueNotifier(0);
 
   @override
   void initState() {
@@ -87,18 +88,15 @@ class _PageViewLoopState extends State<PageViewLoop>
           );
         },
         onPageChanged: (int pageIndex) {
-          setState(() {
-            _currentPageIndex = pageIndex % pageCount;
-          });
+          _currentPageNotifier.value = pageIndex % pageCount;
         },
       ),
     );
   }
 
   Widget _buildIndicator(int itemCount) {
-    return CirclePageIndicator(
-        radius: 4.0,
-        currentPageIndex: _currentPageIndex,
+    return CirclePageIndicator2(
+        currentPageNotifier: _currentPageNotifier,
         itemCount: itemCount,
         dotColor: Colors.white.withOpacity(0.6),
         selectedDotColor: Colors.white,
