@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pageview/collins_pageview_indicator.dart';
 import 'package:pageview/pageview_builder.dart';
 import 'package:pageview/pageview_indicator_demo.dart';
+import 'package:pageview/pageview_loop.dart';
 import 'package:pageview/pageview_simple.dart';
 import 'package:pageview/pageview_simple_arrows.dart';
 import 'package:pageview/pageview_simple_controller.dart';
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         '/pageview_builder': (context) => PageViewBuilder(),
         '/pageview_indicator_demo': (context) => PageViewIndicatorDemo(),
         '/collins_page_view_indicator': (context) => CollinsPageViewIndicator(),
+        '/pageview_loop': (context) => PageViewLoop(),
       },
     );
   }
@@ -36,7 +38,8 @@ class HomePage extends StatelessWidget {
     NavItem('PageView Simple Arrows', '/pageview_simple_arrows'),
     NavItem('PageView Builder', '/pageview_builder'),
     NavItem('PageView Indicator Demo', '/pageview_indicator_demo'),
-    NavItem('Collins PageView Indicator', '/collins_page_view_indicator'),
+    NavItem('Collin\'s PageView Indicator', '/collins_page_view_indicator'),
+    NavItem('PageView Loop', '/pageview_loop'),
   ];
 
   @override

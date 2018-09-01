@@ -1,18 +1,15 @@
 import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-
 import 'package:flutter/material.dart';
 import 'package:pageview/circle_view_indicator.dart';
 
-//https://gist.github.com/collinjackson/4fddbfa2830ea3ac033e34622f278824
-
-class PageViewIndicatorDemo extends StatefulWidget {
+class PageViewLoop extends StatefulWidget {
   @override
-  _PageViewIndicatorDemoState createState() => _PageViewIndicatorDemoState();
+  _PageViewLoopState createState() => _PageViewLoopState();
 }
 
-class _PageViewIndicatorDemoState extends State<PageViewIndicatorDemo>
+class _PageViewLoopState extends State<PageViewLoop>
     with SingleTickerProviderStateMixin {
   final PageController _pageController = PageController();
 
@@ -22,7 +19,7 @@ class _PageViewIndicatorDemoState extends State<PageViewIndicatorDemo>
 
   static const _kCurve = Curves.ease;
 
-  final int maxPageCount = 8;
+  final int maxPageCount = 4;
 
   int _currentPageIndex = 0;
 
@@ -76,13 +73,13 @@ class _PageViewIndicatorDemoState extends State<PageViewIndicatorDemo>
   Widget _buildPageView(List data) {
     final screenSize = MediaQuery.of(context).size;
     final aspectRatio = 2 / 3;
+    final int pageCount = getPageCount(data);
     return SizedBox(
       height: screenSize.width * aspectRatio,
       child: PageView.builder(
         controller: _pageController,
-        itemCount: getPageCount(data),
         itemBuilder: (BuildContext context, int index) {
-          final imageId = data[index]['id'];
+          final imageId = data[index % pageCount]['id'];
 
           return Image.network(
             "https://picsum.photos/${screenSize.width}/${screenSize.width * aspectRatio}?image=$imageId",
@@ -91,7 +88,7 @@ class _PageViewIndicatorDemoState extends State<PageViewIndicatorDemo>
         },
         onPageChanged: (int pageIndex) {
           setState(() {
-            _currentPageIndex = pageIndex;
+            _currentPageIndex = pageIndex % pageCount;
           });
         },
       ),

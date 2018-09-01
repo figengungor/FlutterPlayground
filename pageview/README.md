@@ -10,6 +10,7 @@ PageView examples.
 * PageView Indicator Demo
     * CircleViewIndicator
 * Collins PageView Indicator
+* PageView Loop
 
 
 ## Credits
