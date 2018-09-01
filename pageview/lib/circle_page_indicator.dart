@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CircleViewIndicator extends StatelessWidget {
+class CirclePageIndicator extends StatelessWidget {
   /// The current page
   final int currentPageIndex;
 
@@ -23,7 +23,7 @@ class CircleViewIndicator extends StatelessWidget {
 
   static const double _kDotSpacing = 8.0;
 
-  CircleViewIndicator({
+  CirclePageIndicator({
     Key key,
     @required this.currentPageIndex,
     @required this.itemCount,
@@ -37,29 +37,29 @@ class CircleViewIndicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: List<Widget>.generate(itemCount, (int index) {
-      double size = radius * 2;
-      Color color = dotColor;
-      if (isSelected(index)) {
-        if (isSelectedBigger) size = size * 3;
-        color = selectedDotColor;
-      }
-      return GestureDetector(
-        onTap: () => onPageSelected(index),
-        child: Container(
-          width: size + _kDotSpacing,
-          child: Material(
-            color: color,
-            type: MaterialType.circle,
-            child: Container(
-              width: size,
-              height: size,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: List<Widget>.generate(itemCount, (int index) {
+        double size = radius * 2;
+        Color color = dotColor;
+        if (isSelected(index)) {
+          if (isSelectedBigger) size = size * 3;
+          color = selectedDotColor;
+        }
+        return GestureDetector(
+          onTap: () => onPageSelected(index),
+          child: Container(
+            width: size + _kDotSpacing,
+            child: Material(
+              color: color,
+              type: MaterialType.circle,
+              child: Container(
+                width: size,
+                height: size,
+              ),
             ),
           ),
-        ),
-      );
-    }),
+        );
+      }),
     );
   }
 

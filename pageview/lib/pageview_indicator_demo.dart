@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 import 'package:flutter/material.dart';
-import 'package:pageview/circle_view_indicator.dart';
+import 'package:pageview/circle_page_indicator.dart';
 
 //https://gist.github.com/collinjackson/4fddbfa2830ea3ac033e34622f278824
 
@@ -99,7 +99,7 @@ class _PageViewIndicatorDemoState extends State<PageViewIndicatorDemo>
   }
 
   Widget _buildIndicator(int itemCount) {
-    return CircleViewIndicator(
+    return CirclePageIndicator(
         radius: 4.0,
         currentPageIndex: _currentPageIndex,
         itemCount: itemCount,

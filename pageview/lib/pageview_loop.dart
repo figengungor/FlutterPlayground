@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
-import 'package:pageview/circle_view_indicator.dart';
+import 'package:pageview/circle_page_indicator.dart';
 
 class PageViewLoop extends StatefulWidget {
   @override
@@ -96,7 +96,7 @@ class _PageViewLoopState extends State<PageViewLoop>
   }
 
   Widget _buildIndicator(int itemCount) {
-    return CircleViewIndicator(
+    return CirclePageIndicator(
         radius: 4.0,
         currentPageIndex: _currentPageIndex,
         itemCount: itemCount,
