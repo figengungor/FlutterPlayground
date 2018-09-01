@@ -32,7 +32,7 @@ class _PageViewLoopState extends State<PageViewLoop>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('PageView Builder')),
+      appBar: AppBar(title: Text('PageView Loop')),
       body: _buildBody(),
     );
   }
