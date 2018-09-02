@@ -9,10 +9,8 @@ PageView examples.
 * PageView Builder
 * PageView Indicator Demo
     * CircleViewIndicator
-* Collins PageView Indicator
 * PageView Loop
 * PageView Infinite
-
 
 ## Credits
 

@@ -46,7 +46,11 @@ class _PageViewInfiniteState extends State<PageViewInfinite> {
         if (index == _items.length) {
           return Center(child: CircularProgressIndicator());
         }
-        return Center(child: Text(index.toString()));
+        return Center(
+            child: Text(
+          index.toString(),
+          style: TextStyle(fontSize: 90.0),
+        ));
       },
     );
   }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pageview/collins_pageview_indicator.dart';
 import 'package:pageview/pageview_builder.dart';
 import 'package:pageview/pageview_indicator_demo.dart';
 import 'package:pageview/pageview_infinite.dart';
@@ -25,7 +24,6 @@ class MyApp extends StatelessWidget {
         '/pageview_simple_arrows': (context) => PageViewSimpleArrows(),
         '/pageview_builder': (context) => PageViewBuilder(),
         '/pageview_indicator_demo': (context) => PageViewIndicatorDemo(),
-        '/collins_page_view_indicator': (context) => CollinsPageViewIndicator(),
         '/pageview_loop': (context) => PageViewLoop(),
         '/pageview_infinite': (context) => PageViewInfinite(),
       },
@@ -40,7 +38,6 @@ class HomePage extends StatelessWidget {
     NavItem('PageView Simple Arrows', '/pageview_simple_arrows'),
     NavItem('PageView Builder', '/pageview_builder'),
     NavItem('PageView Indicator Demo', '/pageview_indicator_demo'),
-    NavItem('Collin\'s PageView Indicator', '/collins_page_view_indicator'),
     NavItem('PageView Loop', '/pageview_loop'),
     NavItem('PageView Infinite', '/pageview_infinite'),
   ];

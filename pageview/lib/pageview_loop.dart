@@ -2,7 +2,6 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
-import 'package:pageview/circle_page_indicator.dart';
 import 'package:pageview/circle_page_indicator2.dart';
 
 class PageViewLoop extends StatefulWidget {
@@ -55,7 +54,9 @@ class _PageViewLoopState extends State<PageViewLoop>
           } else if (snapshot.hasError) {
             return Center(child: Text(snapshot.error.toString()));
           } else {
-            return Center(child: Text('Loading...'));
+            return Center(
+              child: CircularProgressIndicator(),
+            );
           }
         });
   }
