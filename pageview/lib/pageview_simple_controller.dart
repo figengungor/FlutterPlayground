@@ -47,29 +47,27 @@ class _PageViewSimpleControllerState extends State<PageViewSimpleController>
   */
 
   _buildBody() {
-    return
-      PageView(
-        children: _pages
-            .map((logo) =>
-            GestureDetector(
-              onTap: () {
-                _animationController.reset();
-                _animationController.forward();
-                _displaySnackBar();
-              },
-              child: RotationTransition(
-                turns: _animationController,
-                child: logo,
-              ),
-            ))
-            .toList(),
-        controller: _pageController,
-      );
+    return PageView(
+      children: _pages
+          .map((logo) => GestureDetector(
+                onTap: () {
+                  _animationController.reset();
+                  _animationController.forward();
+                  _displaySnackBar();
+                },
+                child: RotationTransition(
+                  turns: _animationController,
+                  child: logo,
+                ),
+              ))
+          .toList(),
+      controller: _pageController,
+    );
   }
 
   void _displaySnackBar() {
-    final SnackBar snackBar =
-    SnackBar(content: Text("Page ${_pageController.page.toInt()} is tapped"));
+    final SnackBar snackBar = SnackBar(
+        content: Text("Page ${_pageController.page.toInt()} is tapped"));
     _scaffoldKey.currentState.showSnackBar(snackBar);
   }
 }
