@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pageview/pageview_builder.dart';
+import 'package:pageview/pageview_controller_viewport_fraction.dart';
 import 'package:pageview/pageview_indicator_demo.dart';
 import 'package:pageview/pageview_infinite.dart';
 import 'package:pageview/pageview_loop.dart';
@@ -26,6 +27,8 @@ class MyApp extends StatelessWidget {
         '/pageview_indicator_demo': (context) => PageViewIndicatorDemo(),
         '/pageview_loop': (context) => PageViewLoop(),
         '/pageview_infinite': (context) => PageViewInfinite(),
+        '/pageview_controller_viewport_fraction': (context) =>
+            PageViewControllerViewportFraction(),
       },
     );
   }
@@ -34,12 +37,14 @@ class MyApp extends StatelessWidget {
 class HomePage extends StatelessWidget {
   final _navItems = [
     NavItem('PageView Simple', '/pageview_simple'),
-    NavItem('PageView Simple Controller', '/pageview_simple_controller'),
+    NavItem('PageView Simple PageController', '/pageview_simple_controller'),
     NavItem('PageView Simple Arrows', '/pageview_simple_arrows'),
     NavItem('PageView Builder', '/pageview_builder'),
     NavItem('PageView Indicator Demo', '/pageview_indicator_demo'),
     NavItem('PageView Loop', '/pageview_loop'),
     NavItem('PageView Infinite', '/pageview_infinite'),
+    NavItem('PageView PageController viewPortFraction',
+        '/pageview_controller_viewport_fraction'),
   ];
 
   @override
