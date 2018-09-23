@@ -4,6 +4,7 @@ import 'package:image/fade_in_image_placeholder.dart';
 import 'package:image/image_aspect_ratio.dart';
 import 'package:image/image_asset_background.dart';
 import 'package:image/image_asset_background2.dart';
+import 'package:image/image_color_blend_mode.dart';
 import 'package:image/image_network.dart';
 import 'package:image/image_box_fit.dart';
 
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
         '/fade_in_image_placeholder': (context) => FadeInImagePlaceholder(),
         '/cached_network_image_placeholder': (context) =>
             CachedNetworkImagePlaceholder(),
+        '/image_color_blend_mode': (context) => ImageColorBlendMode(),
       },
     );
   }
@@ -42,6 +44,7 @@ class HomePage extends StatelessWidget {
     NavItem('FadeInImage Placeholder', '/fade_in_image_placeholder'),
     NavItem(
         'CachedNetworkImage Placeholder', '/cached_network_image_placeholder'),
+    NavItem('Image colorBlendMode', '/image_color_blend_mode'),
   ];
 
   @override

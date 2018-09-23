@@ -9,7 +9,10 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
   transparent_image: ^0.1.0
-  cached_network_image: ^0.4.1+1
+  cached_network_image: ^0.4.1
+  flutter_colorpicker: ^0.0.7
+  easy_dialogs: ^1.0.0
+  page_view_indicators: ^1.1.0
 
 dev_dependencies:
   flutter_test:
@@ -36,7 +39,7 @@ flutter:
     - assets/images/dog.jpg
     - assets/images/backdrop.jpg
     - assets/images/placeholder.png
-    - assets/images/loading.gif
+    - assets/images/sir.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
