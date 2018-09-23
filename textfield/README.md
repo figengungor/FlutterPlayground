@@ -2,14 +2,31 @@
 
 Textfield examples.
 
-onChanged, onSubmitted properties
+* Demo Page
 
-TextEditingController
+    * onChanged, onSubmitted properties
 
-Floating label
+    * TextEditingController
 
-Icon, prefixIcon, suffixIcon, Clear Text
+    * Floating label
 
-prefixText, suffixText
+    * Icon, prefixIcon, suffixIcon, Clear Text
+
+    * prefixText, suffixText
+
+    * borders, customizations
 
 
+* InputFormatters Demo Page
+
+    * BlacklistingTextInputFormatter
+
+    * WhitelistingTextInputFormatter
+
+    * UpperCaseTextInputFormatter
+
+
+
+## Credits
+
+[Custom InputFormatters](https://www.youtube.com/watch?v=LDSUZL2HgLA&list=PLBbgqtDgdc_RUWUCInIqxpY)
