@@ -1,3 +1,4 @@
+import 'package:button/icon_and_label_button_tab_view.dart';
 import 'package:button/inkwell_custom_button.dart';
 import 'package:button/flat_button_tab_view.dart';
 import 'package:button/ghost_button_tab_view.dart';
@@ -27,7 +28,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 5,
+      length: 6,
       child: Scaffold(
         appBar: AppBar(
           title: Text('Button Playground'),
@@ -39,6 +40,7 @@ class HomePage extends StatelessWidget {
               Tab(text: 'GhostButton'),
               Tab(text: 'IconButton'),
               Tab(text: 'InkWellCustomButton'),
+              Tab(text: 'IconAndLabelButton'),
             ],
           ),
         ),
@@ -51,6 +53,7 @@ class HomePage extends StatelessWidget {
               GhostButtonTabView(),
               IconButtonTabView(),
               InkWellCustomButton(),
+              IconAndLabelButtonTabView(),
             ],
           ),
         ),
