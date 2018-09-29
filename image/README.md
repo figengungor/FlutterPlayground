@@ -16,7 +16,13 @@ Image examples.
 
 * colorBlendMode & color examples
 
+* Image blurring using BackdropFilter and ImageFilter.blur()
+
 ### #Credits
+
+https://flutter.io/assets-and-images/
+
+https://stackoverflow.com/questions/43550853/how-do-i-do-the-frosted-glass-effect-in-flutter/43552634#43552634
 
 #### Images
 
