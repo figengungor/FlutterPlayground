@@ -16,6 +16,8 @@ Image examples.
 
 * colorBlendMode & color examples
 
+* Image blurring using BackdropFilter and ImageFilter.blur()
+
 ### #Credits
 
 #### Images
