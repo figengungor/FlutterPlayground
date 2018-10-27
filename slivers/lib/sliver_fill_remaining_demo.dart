@@ -12,7 +12,7 @@ class SliverFillRemainingDemo extends StatelessWidget {
         slivers: <Widget>[
           SliverAppBar(
             pinned: true,
-            title: Text("SliverAppBar(flexibleSpace)"),
+            title: Text("SliverFillRemaining"),
             expandedHeight: 200.0,
             flexibleSpace: FlexibleSpaceBar(
               background: Image.asset(
@@ -24,10 +24,14 @@ class SliverFillRemainingDemo extends StatelessWidget {
           SliverList(
             delegate: SliverChildListDelegate(
               List.generate(5,
-                      (_) => Text("All work and no play makes Jack a dull boy.")),
+                  (_) => Text("All work and no play makes Jack a dull boy.")),
             ),
           ),
-          SliverFillRemaining(child: Container(color: Colors.orange,),),
+          SliverFillRemaining(
+            child: Container(
+              color: Colors.orange,
+            ),
+          ),
         ],
       ),
     );

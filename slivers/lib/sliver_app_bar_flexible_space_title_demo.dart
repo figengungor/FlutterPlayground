@@ -13,10 +13,10 @@ class SliverAppBarFlexibleSpaceTitleDemo extends StatelessWidget {
       body: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar(
-            title: Text("SliverFillRemaining"),
             pinned: true,
             expandedHeight: 200.0,
             flexibleSpace: FlexibleSpaceBar(
+              title: Text("SliverAppBar(flexibleSpace:title)"),
               background: Image.asset(
                 "assets/popov.jpg",
                 fit: BoxFit.cover,
