@@ -14,7 +14,17 @@ class RegisterForm1State extends State<RegisterForm1> {
   final _formKey = GlobalKey<FormState>();
   final _scaffoldKey = GlobalKey<ScaffoldState>();
 
-  var _fullName, _emailAddress, _phone, _password, _address;
+  String _fullName, _emailAddress, _phone, _password, _address;
+  Gender _gender;
+
+  final List<DropdownMenuItem<Gender>> _genderDropdownItems = [
+    Gender('Other', '0'),
+    Gender('Female', '1'),
+    Gender('Male', '2'),
+  ]
+      .map((Gender gender) =>
+          DropdownMenuItem<Gender>(value: gender, child: Text(gender.name)))
+      .toList();
 
   @override
   Widget build(BuildContext context) {
@@ -72,6 +82,23 @@ class RegisterForm1State extends State<RegisterForm1> {
                       value.isEmpty ? 'Please enter address' : null,
                   onSaved: (value) => _address = value,
                 ),
+                DropdownButtonFormField<Gender>(
+                  hint: Text('Gender'),
+                  value: _gender,
+                  items: _genderDropdownItems,
+                  validator: (Gender gender) {
+                    return gender == null ? 'Please choose gender' : null;
+                  },
+                  onChanged: (Gender gender) {
+                    print(gender.name);
+                    setState(() {
+                      _gender = gender;
+                    });
+                  },
+                  onSaved: (Gender gender) {
+                    _gender = gender;
+                  },
+                ),
                 RaisedButton(
                   child: Text('Submit'),
                   color: Theme.of(context).accentColor,
@@ -103,4 +130,11 @@ class RegisterForm1State extends State<RegisterForm1> {
       ));
     }
   }
+}
+
+class Gender {
+  final String name;
+  final String value;
+
+  const Gender(this.name, this.value);
 }
