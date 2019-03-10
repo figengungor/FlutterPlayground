@@ -1,9 +1,10 @@
-import 'package:animation/custom_animated_widget_demo.dart';
-import 'package:animation/animated_widget_examples.dart';
-import 'package:animation/animation_state_demo.dart';
-import 'package:animation/basic_animation_demo.dart';
-import 'package:animation/hero_animation_demo.dart';
-import 'package:animation/route_animation_demo.dart';
+import 'package:animation/animated_widget/custom_animated_widget_demo.dart';
+import 'package:animation/animated_widget/animated_widget_examples.dart';
+import 'package:animation/basic/animation_state_demo.dart';
+import 'package:animation/basic/basic_animation_demo.dart';
+import 'package:animation/hero/hero_animation_demo.dart';
+import 'package:animation/route/route_animation_demo.dart';
+import 'package:animation/transform/transform_examples.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         '/animation_state_demo': (context) => AnimationStateDemo(),
         '/route_animation_demo': (context) => RouteAnimationDemo(),
         '/hero_animation_demo': (context) => HeroAnimationDemo(),
+        '/transform_examples': (context) => TransformExamples(),
       },
     );
   }
@@ -37,6 +39,7 @@ class HomePage extends StatelessWidget {
     NavItem('Animation State Demo', '/animation_state_demo'),
     NavItem('Route Animation Demo', '/route_animation_demo'),
     NavItem('Hero Animation Demo', '/hero_animation_demo'),
+    NavItem('Transform Examples', '/transform_examples'),
   ];
 
   @override

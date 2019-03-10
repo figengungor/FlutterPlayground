@@ -1,4 +1,4 @@
-import 'package:animation/hero_animation_next_page.dart';
+import 'package:animation/hero/hero_animation_next_page.dart';
 import 'package:flutter/material.dart';
 
 class HeroAnimationDemo extends StatelessWidget {

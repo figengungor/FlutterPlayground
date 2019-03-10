@@ -1,5 +1,5 @@
-import 'package:animation/second_page.dart';
-import 'package:animation/slide_from_right_transition.dart';
+import 'package:animation/route/second_page.dart';
+import 'package:animation/route/slide_from_right_transition.dart';
 import 'package:flutter/material.dart';
 
 class RouteAnimationDemo extends StatefulWidget {
