@@ -20,6 +20,7 @@ class InputFormattersPage extends StatelessWidget {
           _buildBlacklistingTextInputFormatterDemo(),
           _buildWhitelistingTextInputFormatterDemo(),
           _buildCustomUpperCaseTextInputFormatterDemo(),
+          _buildPhoneTextInputFormatter(),
         ],
       ),
     );
@@ -63,6 +64,26 @@ class InputFormattersPage extends StatelessWidget {
           decoration: InputDecoration(labelText: 'CAPSLOCK IS ON'),
           inputFormatters: [
             UpperCaseTextInputFormatter(),
+          ],
+        )
+      ],
+    );
+  }
+
+  _buildPhoneTextInputFormatter() {
+    return DemoView(
+      title: 'PhoneTextInputFormatter',
+      children: <Widget>[
+        TextField(
+          keyboardType: TextInputType.number,
+          maxLength: 14,
+          decoration: InputDecoration(
+            labelText: 'PhoneTextInputFormatter',
+            prefixText: '0',
+          ),
+          inputFormatters: [
+            WhitelistingTextInputFormatter.digitsOnly,
+            PhoneTextInputFormatter(),
           ],
         )
       ],

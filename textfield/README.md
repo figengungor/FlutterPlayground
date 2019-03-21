@@ -24,9 +24,12 @@ Textfield examples.
     * WhitelistingTextInputFormatter
 
     * UpperCaseTextInputFormatter
+    
+    * PhoneTextInputFormatter
 
 
 
 ## Credits
 
 [Custom InputFormatters](https://www.youtube.com/watch?v=LDSUZL2HgLA&list=PLBbgqtDgdc_RUWUCInIqxpY)
+[PhoneTextInputFormatter](https://github.com/flutter/flutter/blob/479be4447955a6a69e49ae9a393bf693b65f5c30/examples/flutter_gallery/lib/demo/material/text_form_field_demo.dart#L303)
