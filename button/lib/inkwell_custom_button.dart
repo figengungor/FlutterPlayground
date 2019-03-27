@@ -61,6 +61,10 @@ class InkWellCustomButton extends StatelessWidget {
         ),
         //Ink, which paints a Decoration on a Material,
         //allowing InkResponse and InkWell splashes to paint over them.
+        //This doesn't work well if it is wrapped with opaque graphic
+        //such as Container with color, Image
+        //In that case, Wrap Ink with Material giving it a transparent color
+        //or much better use Material only
         Ink(
           decoration: BoxDecoration(
               border: Border.all(),
