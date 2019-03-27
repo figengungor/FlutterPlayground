@@ -2,8 +2,9 @@
 
 Button examples.
 
-RaisedButton, FlatButton, IconButton, Custom Button with Inkwell,
-Ghost Button, FloatingActionButton...
+RaisedButton, FlatButton, IconButton, Custom Button with Inkwell
+(Ink, Material), Ghost Button, FloatingActionButton, 
+ButtonTheme(resizing buttons), ButtonTheme.bar, ButtonBar...
 
 
 https://stackoverflow.com/a/52303225/1463542
