@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class GhostButtonTabView extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,15 +20,17 @@ class GhostButtonTabView extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        Container(
-          child: FlatButton(
-            color: Colors.transparent,
-            textColor: Colors.white,
-            child: Text('Login'),
-            onPressed: () {},
-          ),
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.white, width: 2.0),
+        Material(
+          color: Colors.transparent,
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(2.0),
+              side: BorderSide(color: Colors.white)),
+          child: InkWell(
+            onTap: () {},
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Text('Login', style: TextStyle(color: Colors.white),),
+            ),
           ),
         ),
       ],
