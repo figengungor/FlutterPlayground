@@ -12,7 +12,7 @@ dependencies:
   cupertino_icons: ^0.1.2
 
 dev_dependencies:
-  intl_translation: "^0.16.6"
+  intl_translation: "^0.17.3"
 
   flutter_test:
     sdk: flutter
