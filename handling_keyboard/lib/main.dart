@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:handling_keyboard/closing_keyboard.dart';
-import 'package:handling_keyboard/making_input_fields_visible_when_focused.dart';
-import 'package:handling_keyboard/making_input_fields_visible_when_focused_issue.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,10 +14,6 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => HomePage(),
         '/closing_keyboard': (context) => ClosingKeyboardPage(),
-        '/making_input_fields_visible_when_focused_issue': (context) =>
-            MakingInputFieldsVisibleWhenFocusedIssuePage(),
-        '/making_input_fields_visible_when_focused': (context) =>
-            MakingInputFieldsVisibleWhenFocusedPage(),
       },
     );
   }
@@ -28,10 +22,6 @@ class MyApp extends StatelessWidget {
 class HomePage extends StatelessWidget {
   final _navItems = [
     NavItem('Closing Keyboard', '/closing_keyboard'),
-    NavItem('Making Input Fields Visible When Focused Issue',
-        '/making_input_fields_visible_when_focused_issue'),
-    NavItem('Making Input Fields Visible When Focused Solution',
-        '/making_input_fields_visible_when_focused'),
   ];
 
   @override
