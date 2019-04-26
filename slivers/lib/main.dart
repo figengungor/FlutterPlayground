@@ -8,6 +8,7 @@ import 'package:slivers/sliver_fill_remaining_demo.dart';
 import 'package:slivers/sliver_fixed_extent_list_demo.dart';
 import 'package:slivers/sliver_grid_demo.dart';
 import 'package:slivers/sliver_grid_extent_demo.dart';
+import 'package:slivers/sliver_list_grid_bg_demo.dart';
 import 'package:slivers/sliver_list_sliver_child_builder_delegate.dart';
 import 'package:slivers/sliver_list_sliver_child_list_delegate.dart';
 import 'package:slivers/sliver_persistent_header_demo.dart';
@@ -49,6 +50,8 @@ class MyApp extends StatelessWidget {
         '/sliver_to_box_adapter_demo': (context) => SliverToBoxAdapterDemo(),
         '/sliver_prototype_extent_list_demo': (context) =>
             SliverPrototypeExtentListDemo(),
+        '/sliver_list_grid_bg_demo': (context) =>
+            SliverListGridBgDemo(),
       },
     );
   }
@@ -74,6 +77,7 @@ class HomePage extends StatelessWidget {
     NavItem('SliverGridExtent', '/sliver_grid_extent_demo'),
     NavItem('SliverPersistentHeader', '/sliver_persistent_header_demo'),
     NavItem('SliverToBoxAdapter', '/sliver_to_box_adapter_demo'),
+    NavItem('SliverListGridBgDemo', '/sliver_list_grid_bg_demo'),
   ];
 
   @override
