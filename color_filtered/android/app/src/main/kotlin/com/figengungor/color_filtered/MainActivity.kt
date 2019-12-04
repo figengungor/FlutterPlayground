@@ -1,4 +1,4 @@
-package com.figengungor.color_filtered_demo
+package com.figengungor.color_filtered
 
 import android.os.Bundle
 
